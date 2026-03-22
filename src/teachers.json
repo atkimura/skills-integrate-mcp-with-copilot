@@ -1,0 +1,12 @@
+{
+  "teachers": [
+    {
+      "username": "mrodriguez",
+      "password": "falcon-hall-monitor"
+    },
+    {
+      "username": "lchen",
+      "password": "robotics-lab-2026"
+    }
+  ]
+}

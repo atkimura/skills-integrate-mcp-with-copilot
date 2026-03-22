@@ -16,7 +16,6 @@ body {
 }
 
 header {
-  text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
@@ -24,8 +23,60 @@ header {
   border-radius: 5px;
 }
 
+.header-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.header-top-row h1,
+.header-top-row h2 {
+  text-align: left;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.account-menu {
+  position: relative;
+}
+
+.icon-button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+}
+
+.account-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 220px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  padding: 15px;
+  z-index: 10;
+}
+
+.account-panel p {
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.account-panel button {
+  width: 100%;
+}
+
+.secondary-button {
+  background-color: #546e7a;
+}
+
+.secondary-button:hover {
+  background-color: #455a64;
 }
 
 main {
@@ -111,18 +162,18 @@ section h3 {
 }
 
 .delete-btn {
-  background: none;
+  background-color: #c62828;
+  color: white;
   border: none;
-  color: #c62828;
   cursor: pointer;
   font-size: 14px;
-  padding: 2px 5px;
+  padding: 6px 10px;
   transition: all 0.2s;
   border-radius: 3px;
 }
 
 .delete-btn:hover {
-  background-color: #ffebee;
+  background-color: #b71c1c;
 }
 
 .participants-section p {
@@ -164,6 +215,25 @@ button:hover {
   background-color: #3949ab;
 }
 
+.info-banner,
+.success-banner {
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border-radius: 4px;
+}
+
+.info-banner {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.success-banner {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
 .message {
   margin-top: 20px;
   padding: 10px;
@@ -192,9 +262,56 @@ button:hover {
   display: none;
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: white;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #1a237e;
+}
+
 footer {
   text-align: center;
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 767px) {
+  .header-top-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-top-row h1,
+  .header-top-row h2 {
+    text-align: center;
+  }
+
+  .account-menu {
+    align-self: flex-end;
+  }
 }
